@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}valorizacion/css/valorizacion_print.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}valorizacion/css/valorizacion_print.css" media="print"/>
+
+    <title>Valorización - Impresión</title>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}common/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        var cambiar_horas = function() {
+            var total_horas = 0;
+            $(".horas_trabajadas").each(function() {
+                total_horas += parseFloat($(this).val().replace(",", "."));
+            });
+            return total_horas.toFixed(2);
+        };
+
+        var actualizar_horas = function() {
+            $("#total_horas").val(cambiar_horas());
+        };
+
+        var actualizar_costo = function() {
+            var costo_horas = parseFloat($("#costo_horas").val().replace(",", ".")).toFixed(2);
+            var total_costo = parseFloat($("#total_horas").val()*costo_horas).toFixed(2);
+            var total_igv = parseFloat(total_costo*$("#igv").val()/100).toFixed(2);
+            var total = (parseFloat(total_igv) + parseFloat(total_costo)).toFixed(2);
+            $("#total_costo").val(total_costo);
+            $("#total_igv").val(total_igv);
+            $("#total").val(total);
+            $("#costo_horas").val(costo_horas);
+        };
+
+        var getEverything = function () {
+            var htmlStartTag = function () {
+                var attrs = $('html')[0].attributes;
+                var result = '<html';
+                $.each(attrs, function() {
+                    result += ' ' + this.name + '="' + this.value + '"';
+                });
+                result += '>';
+                return result;
+            };
+
+            return htmlStartTag() + $('html').html() + '</html>';
+        };
+
+        $(document).ready(function() {
+            actualizar_horas();
+            actualizar_costo();
+
+            $(".horas_trabajadas").change(function() {
+                actualizar_horas();
+                actualizar_costo();
+            });
+
+            $(".editable").change(function() {
+                actualizar_costo();
+            });
+
+            $(".moneda").change(function() {
+                var moneda = $(this).val();
+                $(".moneda").each(function() {
+                    $(this).val(moneda);
+                });
+            });
+
+{#            $("#to_pdf").click(function() {#}
+{#                $.post("{% url valorizacion_to_pdf %}", {html: getEverything()});#}
+{#            });#}
+        })
+    </script>
+</head>
+
+<body>
+    {# Encabezado #}
+    <img src="{{ STATIC_URL }}common/img/logo.png" title="ETECO S.A." alt="ETECO S.A." width="150px">
+    <h1>Valorización</h1>
+    {% with obj.partes.all.0 as parte %}
+    <table class="header">
+        <tbody>
+            <tr>
+                <th>
+                    Cliente
+                </th>
+                <td>
+                    <input type="text" value="{{ parte.obra.cliente }}" class="head_edit">
+                </td>
+                <th>
+                    Centro de costos
+                </th>
+                <td>
+                    <input type="text"
+                           value="{% for valorizacion in obj.valorizaciones.all %}{{ valorizacion.maquina.centro_costos }}{% if forloop.last %}.{% else %} - {% endif %}{% endfor %}"
+                           class="head_edit">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Máquina{{ obj.valorizaciones.all|pluralize }}
+                </th>
+                <td>
+                    <input type="text"
+                           value="{% for valorizacion in obj.valorizaciones.all %}{{ valorizacion.maquina.maquina }} {{ valorizacion.maquina.marca }}{% if forloop.last %}.{% else %} - {% endif %}{% endfor %}"
+                           class="head_edit">
+
+                </td>
+                <th>
+                    Serie
+                </th>
+                <td>
+                    <input type="text"
+                           value="{% for valorizacion in obj.valorizaciones.all %}{{ valorizacion.maquina.serie }}{% if forloop.last %}.{% else %} - {% endif %}{% endfor %}"
+                           class="head_edit">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Mes
+                </th>
+                <td>
+                    <input type="text" value="{{ parte.fecha|date:"F"|capfirst }}" class="head_edit">
+                </td>
+                <th>
+                    Fecha
+                </th>
+                {% with obj.valorizaciones.all.0 as valorizacion %}
+                <td>
+                    <input type="text" value="{{ valorizacion.fecha_inicio|date:"d/m/o" }} - {{ valorizacion.fecha_fin|date:"d/m/o" }}" class="head_edit">
+                </td>
+                {% endwith %}
+            </tr>
+        </tbody>
+    </table>
+    {% endwith %}
+
+    {# Partes diarios #}
+    <table class="partes">
+        <thead>
+            <tr>
+                <th rowspan="2">
+                    Día
+                </th>
+                <th rowspan="2">
+                    Fecha
+                </th>
+                <th rowspan="2">
+                    Nro de parte
+                </th>
+                <th colspan="2">
+                    Horómetro
+                </th>
+                <th rowspan="2">
+                    Horómetro
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Horómetro inicial
+                </th>
+                <th>
+                    Horómetro final
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for parte in obj.get_partes %}
+            <tr>
+                <td>
+                    {{ parte.fecha|date:"l"|capfirst }}
+                </td>
+                <td>
+                    {{ parte.fecha|date:"d/m/o" }}
+                </td>
+                <td>
+                    {{ parte.numero }}
+                </td>
+                <td>
+                    {{ parte.horometro_inicio }}
+                </td>
+                <td>
+                    {{ parte.horometro_final }}
+                </td>
+                <td>
+                    <input type="text" value="{{ parte.horas_trabajadas }}" class="horas_trabajadas" />
+                </td>
+            </tr>
+        {% endfor %}
+            <tr>
+                <td></td><td></td><td></td><td></td>
+                <td>
+                    Total de horas
+                </td>
+                <td>
+                    <input type="text" value="{{ parte.horas_trabajadas }}" id="total_horas" class="editable" />
+                </td>
+            </tr>
+        <tr>
+            <td></td>
+            <td>
+                Costo por hora
+            </td>
+            <td>
+                <input type="text" value="S/." class="editable moneda small">
+                <input type="text" id="costo_horas" value="{{ obj.costo_hora }}" class="editable" />
+            </td>
+            <td></td>
+            <td>
+                Sub Total
+            </td>
+            <td>
+                <input type="text" value="S/." class="editable moneda small">
+                <input type="text" id="total_costo" class="editable" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                IGV
+            </td>
+            <td>
+                <input type="text" id="igv" value="18" class="editable small" /> %
+            </td>
+            <td></td>
+            <td>
+                IGV
+            </td>
+            <td>
+                <input type="text" value="S/." class="editable moneda small">
+                <input type="text" id="total_igv" class="editable"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td>
+            <td>
+                Total
+            </td>
+            <td>
+                <input type="text" value="S/." class="editable moneda small">
+                <input type="text" id="total" />
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="sign">
+        <img src="{{ STATIC_URL }}common/img/firma.jpg" alt="" width="250px">
+    </div>
+
+{#    <button id="to_pdf">PDF</button>#}
+</body>
+</html>

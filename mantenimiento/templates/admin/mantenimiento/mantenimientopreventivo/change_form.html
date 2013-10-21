@@ -1,0 +1,62 @@
+{% extends "admin/change_form.html" %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script type="text/javascript">
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+            );
+        }
+
+        $(document).ready(function() {
+            // Cambiar la máquina y el periodo
+            var id_maquina = getURLParameter("maq");
+            if(id_maquina != "null") {
+                $("#id_maquina option[value=" + id_maquina + "]").attr("selected", "selected")
+            }
+            var id_periodo = getURLParameter("per");
+            if(id_periodo != "null") {
+                $('input[name=periodo_servicio][value=' + id_periodo + ']').attr('checked', true);
+                var url = "{% url json_get_periodo %}";
+                var request = $.ajax({
+                                         url: url,
+                                         type: "GET",
+                                         data: {id_periodo: id_periodo},
+                                         dataType: "html"
+                                     });
+                request.done(function(msg) {
+                    var data = jQuery.parseJSON(msg);
+                    for(i = 0; i < data.periodos.length; i++) {
+                        $('input[name=periodo_servicio][value=' + data.periodos[i] + ']').attr('checked', true);
+                    }
+                    for(i = 0; i < data.servicios.length; i++) {
+                        $('input[name=servicios][value=' + data.servicios[i] + ']').attr('checked', true);
+                    }
+                });
+            }
+
+            // Seleccionar automáticamente servicios y periodos relacionados
+            $("input[name=periodo_servicio]").change(function() {
+                var id_periodo = $(this).val();
+                var url = "{% url json_get_periodo %}";
+                var request = $.ajax({
+                    url: url,
+                    type: "GET",
+                    data: {id_periodo: id_periodo},
+                    dataType: "html"
+                });
+                var is_checked = $(this).is(':checked');
+                request.done(function(msg) {
+                    var data = jQuery.parseJSON(msg);
+                    for(i = 0; i < data.periodos.length; i++) {
+                        $('input[name=periodo_servicio][value=' + data.periodos[i] + ']').attr('checked', is_checked);
+                    }
+                    for(i = 0; i < data.servicios.length; i++) {
+                        $('input[name=servicios][value=' + data.servicios[i] + ']').attr('checked', is_checked);
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

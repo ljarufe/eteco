@@ -1,0 +1,554 @@
+[
+    {
+        "pk": 1,
+        "model": "mantenimiento.sistemaservicio",
+        "fields": {
+            "nombre": "Motor"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "mantenimiento.sistemaservicio",
+        "fields": {
+            "nombre": "Hidr\u00e1ulico"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "mantenimiento.sistemaservicio",
+        "fields": {
+            "nombre": "Transmisi\u00f3n"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "mantenimiento.sistemaservicio",
+        "fields": {
+            "nombre": "Rodamiento"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "mantenimiento.sistemaservicio",
+        "fields": {
+            "nombre": "Corte y desgarre"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "mantenimiento.sistemaservicio",
+        "fields": {
+            "nombre": "El\u00e9ctrico"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Sistema el\u00e9ctrico (Electr\u00f3nico)",
+            "uso_correctivo": 0,
+            "sistema": 1
+        }
+    },
+    {
+        "pk": 29,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Sistema de enfriamiento",
+            "uso_correctivo": 0,
+            "sistema": 1
+        }
+    },
+    {
+        "pk": 30,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Sistema de inyecci\u00f3n",
+            "uso_correctivo": 0,
+            "sistema": 1
+        }
+    },
+    {
+        "pk": 31,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Sistema de lubricaci\u00f3n",
+            "uso_correctivo": 0,
+            "sistema": 1
+        }
+    },
+    {
+        "pk": 32,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Sistema de admisi\u00f3n y escape",
+            "uso_correctivo": 0,
+            "sistema": 1
+        }
+    },
+    {
+        "pk": 33,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Filtros",
+            "uso_correctivo": 0,
+            "sistema": 1
+        }
+    },
+    {
+        "pk": 34,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Otros",
+            "uso_correctivo": 0,
+            "sistema": 1
+        }
+    },
+    {
+        "pk": 35,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Bobas",
+            "uso_correctivo": 0,
+            "sistema": 2
+        }
+    },
+    {
+        "pk": 36,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Motores",
+            "uso_correctivo": 0,
+            "sistema": 2
+        }
+    },
+    {
+        "pk": 37,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "V\u00e1lvulas",
+            "uso_correctivo": 0,
+            "sistema": 2
+        }
+    },
+    {
+        "pk": 38,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Mangueras",
+            "uso_correctivo": 0,
+            "sistema": 2
+        }
+    },
+    {
+        "pk": 39,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Aceites y filtros",
+            "uso_correctivo": 0,
+            "sistema": 2
+        }
+    },
+    {
+        "pk": 40,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Botellas hidr\u00e1ulicas",
+            "uso_correctivo": 0,
+            "sistema": 2
+        }
+    },
+    {
+        "pk": 64,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Otros",
+            "uso_correctivo": 0,
+            "sistema": 2
+        }
+    },
+    {
+        "pk": 41,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Motores",
+            "uso_correctivo": 0,
+            "sistema": 3
+        }
+    },
+    {
+        "pk": 42,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Mangueras",
+            "uso_correctivo": 0,
+            "sistema": 3
+        }
+    },
+    {
+        "pk": 43,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Aceites y fitros",
+            "uso_correctivo": 0,
+            "sistema": 3
+        }
+    },
+    {
+        "pk": 63,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Otros",
+            "uso_correctivo": 0,
+            "sistema": 3
+        }
+    },
+    {
+        "pk": 44,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Rueda gu\u00eda",
+            "uso_correctivo": 0,
+            "sistema": 4
+        }
+    },
+    {
+        "pk": 45,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Rodillos",
+            "uso_correctivo": 0,
+            "sistema": 4
+        }
+    },
+    {
+        "pk": 46,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Cadenas y zapatas",
+            "uso_correctivo": 0,
+            "sistema": 4
+        }
+    },
+    {
+        "pk": 47,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Bastidores",
+            "uso_correctivo": 0,
+            "sistema": 4
+        }
+    },
+    {
+        "pk": 48,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Guiadores",
+            "uso_correctivo": 0,
+            "sistema": 4
+        }
+    },
+    {
+        "pk": 49,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Templador de cadena",
+            "uso_correctivo": 0,
+            "sistema": 4
+        }
+    },
+    {
+        "pk": 50,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Otros",
+            "uso_correctivo": 0,
+            "sistema": 4
+        }
+    },
+    {
+        "pk": 51,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Lamp\u00f3n / Cuchar\u00f3n",
+            "uso_correctivo": 0,
+            "sistema": 5
+        }
+    },
+    {
+        "pk": 52,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Cuchillas / Cantoneras",
+            "uso_correctivo": 0,
+            "sistema": 5
+        }
+    },
+    {
+        "pk": 53,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Riper",
+            "uso_correctivo": 0,
+            "sistema": 5
+        }
+    },
+    {
+        "pk": 54,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "U\u00f1as",
+            "uso_correctivo": 0,
+            "sistema": 5
+        }
+    },
+    {
+        "pk": 55,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Otros",
+            "uso_correctivo": 0,
+            "sistema": 5
+        }
+    },
+    {
+        "pk": 56,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Tableros, mandos",
+            "uso_correctivo": 0,
+            "sistema": 6
+        }
+    },
+    {
+        "pk": 57,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Solenoides",
+            "uso_correctivo": 0,
+            "sistema": 6
+        }
+    },
+    {
+        "pk": 58,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Electrov\u00e1lvulas",
+            "uso_correctivo": 0,
+            "sistema": 6
+        }
+    },
+    {
+        "pk": 59,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Motor y alternador",
+            "uso_correctivo": 0,
+            "sistema": 6
+        }
+    },
+    {
+        "pk": 60,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Bater\u00edas",
+            "uso_correctivo": 0,
+            "sistema": 6
+        }
+    },
+    {
+        "pk": 61,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Faros",
+            "uso_correctivo": 0,
+            "sistema": 6
+        }
+    },
+    {
+        "pk": 62,
+        "model": "mantenimiento.tiposerviciocorrectivo",
+        "fields": {
+            "nombre": "Otros",
+            "uso_correctivo": 0,
+            "sistema": 6
+        }
+    },
+    {
+        "pk": 1,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de aceite de motor"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de filtro de aceite de motor"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de filtro de petroleo"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de filtro de aire secundario"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de filtro separador de agua"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de filtro de aire primario"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de filtro hidr\u00e1ulico"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de filtro de transmisi\u00f3n"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de filtro de pilotaje"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de aceite de transmisi\u00f3n"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Revisi\u00f3n de strainer"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de aceite de transmisi\u00f3n"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de aceite de corona"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Cambio de aceite hidr\u00e1ulico"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Calibraci\u00f3n de motor"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Calibraci\u00f3n de inyectores"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "mantenimiento.tiposerviciopreventivo",
+        "fields": {
+            "nombre": "Revisi\u00f3n de sistema el\u00e9ctrico, arrancador y alternador"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "mantenimiento.periodoservicio",
+        "fields": {
+            "horas": 250,
+            "servicios": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "pk": 2,
+        "model": "mantenimiento.periodoservicio",
+        "fields": {
+            "horas": 500,
+            "servicios": [
+                6,
+                7,
+                8,
+                9
+            ]
+        }
+    },
+    {
+        "pk": 3,
+        "model": "mantenimiento.periodoservicio",
+        "fields": {
+            "horas": 1000,
+            "servicios": [
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+            ]
+        }
+    },
+    {
+        "pk": 1,
+        "model": "mantenimiento.mecanico",
+        "fields": {
+            "nombre": "Mec\u00e1nico de prueba"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "mantenimiento.supervisor",
+        "fields": {
+            "nombre": "Supervisor de prueba"
+        }
+    }
+]

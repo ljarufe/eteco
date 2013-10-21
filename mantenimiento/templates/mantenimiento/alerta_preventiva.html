@@ -1,0 +1,100 @@
+{% extends "admin/base_site.html" %}
+
+{% load i18n admin_static %}
+
+{% block title %}Alertas{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ STATIC_URL }}admin/js/admin/RelatedObjectLookups.js"></script>
+{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}mantenimiento/css/admin.css" />
+{% endblock %}
+
+{% block content %}
+    <h2>Alertas de mantenimiento preventivo</h2>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">
+                    Máquina
+                </th>
+                <th rowspan="2">
+                    Horómetro actual
+                </th>
+                {% for periodo in periodos %}
+                <th colspan="2">
+                    {{ periodo }} horas
+                </th>
+                {% endfor %}
+                <th rowspan="2">
+                    Ubicación
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Estado
+                </th>
+                <th>
+                    Último mant.
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th>
+                    Último mant.
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th>
+                    Último mant.
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for maquina in maquinas %}
+            <tr>
+                <th>
+                    {{ maquina }}
+                </th>
+                <td>
+                    {{ maquina.horometro }}
+                </td>
+                {% for periodo in maquina.get_estado %}
+                    <td>
+                        <div class="semaforo {{ periodo.estado }}"></div>
+                        {% if periodo.estado != "verde" %}
+                            <a href="/mantenimiento/mantenimientopreventivo/add/?maq={{ maquina.id }}&per={{ periodo.id }}"
+                               class="add-another"
+                               onclick="return showAddAnotherPopup(this);">
+                                <img src="{{ STATIC_URL }}common/img/Icon_tools1.png" alt="Realizar mantenimiento" title="Realizar mantenimiento"/>
+                            </a>
+                        {% else %}
+                            {% if periodo.mantenimiento %}
+                                <a href="{{ periodo.mantenimiento.get_absolute_url }}" target="_blank">
+                                    <img src="{{ STATIC_URL }}common/img/mantenimiento.png" title="Ver mantenimiento" alt="Ver mantenimiento">
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                    <td>
+                        {{ periodo.mantenimiento.horometro }}
+                    </td>
+                {% endfor %}
+                <td>
+                    {% if maquina.ubicacion %}
+                        {{ maquina.ubicacion }}
+                    {% else %}
+                        {{ maquina.get_ubicacion }}
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

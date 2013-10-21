@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}mantenimiento/css/reporte_costos.css" media="screen"/>
+
+    <title>Reporte Costo-Beneficio</title>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}common/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#id_mo, #id_seguro, #id_cam").focusout(function() {
+                var total = parseFloat($("#id_total").val().replace(",", "."));
+                var mo = parseFloat($("#id_mo").val().replace(",", "."));
+                var seguro = parseFloat($("#id_seguro").val().replace(",", "."));
+                var combustible = parseFloat($("#id_combustible").val().replace(",", "."));
+                var terceros = parseFloat($("#id_terceros").val().replace(",", "."));
+                var transportes = parseFloat($("#id_transportes").val().replace(",", "."));
+                var otros = parseFloat($("#id_otros").val().replace(",", "."));
+                var sum_total = total + mo + seguro + combustible + terceros + transportes + otros;
+                $("#id_sum_total").val(sum_total.toFixed(2).replace(".", ","));
+            });
+
+            $("#id_calcular").click(function() {
+                var resultado = $("#id_beneficio").val().replace(",", ".") / $("#id_sum_total").val().replace(",", ".");
+                $("#id_resultado").html(resultado.toFixed(2));
+                if(resultado > 1) {
+                    $("#id_resultado").css({"color": "green"});
+                }
+                else {
+                    $("#id_resultado").css({"color": "red"});
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <a href="{% url admin:index %}" title="Inicio">
+        <img src="{{ STATIC_URL }}common/img/logo.png" title="ETECO S.A." alt="ETECO S.A." width="150px">
+    </a>
+    <h1>Reporte Costo-Beneficio</h1>
+    <table class="header">
+        <tr>
+            <th>
+                Centro de costos:
+            </th>
+            <td>
+                {{ maquina }}
+            </td>
+            <th>
+                Fecha de inicio:
+            </th>
+            <td>
+                {{ fecha_inicio|date:"d/m/o" }}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Fecha de fin:
+            </th>
+            <td>
+                {{ fecha_fin|date:"d/m/o" }}
+            </td>
+            <th>
+                Nombre:
+            </th>
+            <td>
+                {{ maquina.maquina }} {{ maquina.marca }}
+            </td>
+        </tr>
+    </table>
+    <table class="header">
+        <tr>
+            <th>
+                Total de mantenimientos
+            </th>
+            <td>
+                S/. <input type="text" id="id_total" value="{{ sum_total|floatformat:2 }}" />
+            </td>
+            <th>
+                MO
+            </th>
+            <td>
+                S/. <input type="text" id="id_mo" value="0"/>
+            </td>
+            <th>
+                Seguro
+            </th>
+            <td>
+                S/. <input type="text" id="id_seguro" value="0"/>
+            </td>
+            <th>
+                Combustible
+            </th>
+            <td>
+                S/. <input type="text" id="id_combustible" value="0"/>
+            </td>
+            <th>
+                Serv. Terceros
+            </th>
+            <td>
+                S/. <input type="text" id="id_terceros" value="0"/>
+            </td>
+            <th>
+                Transportes
+            </th>
+            <td>
+                S/. <input type="text" id="id_transportes" value="0"/>
+            </td>
+            <th>
+                Otros
+            </th>
+            <td>
+                S/. <input type="text" id="id_otros" value="0"/>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Total:
+            </th>
+            <td>
+                S/. <input type="text" id="id_sum_total" value="{{ sum_total|floatformat:2 }}"/>
+            </td>
+            <th>
+                Beneficio:
+            </th>
+            <td>
+                S/. <input type="text" id="id_beneficio" value="0"/>
+            </td>
+            <td>
+                <button id="id_calcular">Calcular</button>
+            </td>
+        </tr>
+    </table>
+    <div class="resultado">
+        COSTO-BENEFICIO: <span id="id_resultado"></span>
+    </div>
+</body>

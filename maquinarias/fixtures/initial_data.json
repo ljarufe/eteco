@@ -1,0 +1,865 @@
+[
+    {
+        "pk": 2,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Atlas Copco"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Caterpillar"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Chang Ling"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Com-Pair"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Dynamic"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Finlan"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Gardner Denver"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Honda"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Ingersoll Rand"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "International"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Junjin"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Mitsubishi"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Pingon"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Sany"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Shaanxi"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Shacman"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Shantui"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Toyota"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Vibromax"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "maquinarias.marca",
+        "fields": {
+            "nombre": "Xcmg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Bomba de concreto"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Cami\u00f3n"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Cargador frontal"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Compactadora"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Compresora"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Excavadora oruga"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Excavadora sobre llantas"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Martillo neum\u00e1tico perforador"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Mezcladora de concreto"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Motoniveladora"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Motor Zaranda"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Perforadora hidr\u00e1ulica"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Rock Drill"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Rodillo neum\u00e1tico"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Track Drill"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Tractor Bulldozer"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Vibradora de concreto"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "maquinarias.tipomaquina",
+        "fields": {
+            "nombre": "Volquete"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "",
+            "centro_costos": 1101,
+            "maquina": 1,
+            "marca": 1,
+            "placa": "",
+            "serie": "34683201",
+            "horometro": 0.0,
+            "modelo": "750",
+            "motor": "LT10-C",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 2,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "",
+            "centro_costos": 1102,
+            "maquina": 1,
+            "marca": 2,
+            "placa": "",
+            "serie": "200334-35",
+            "horometro": 0.0,
+            "modelo": "XA-430",
+            "motor": "7W4435",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 3,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "1992",
+            "centro_costos": 1103,
+            "maquina": 1,
+            "marca": 1,
+            "placa": "",
+            "serie": "31754",
+            "horometro": 0.0,
+            "modelo": "GYRO-900",
+            "motor": "CUMMINS NT 855C-280",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 9,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2006",
+            "centro_costos": 1104,
+            "maquina": 3,
+            "marca": 2,
+            "placa": "",
+            "serie": "4714490",
+            "horometro": 0.0,
+            "modelo": "PIONJAR 120",
+            "motor": "",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 5,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "1998",
+            "centro_costos": 1106,
+            "maquina": 2,
+            "marca": 1,
+            "placa": "",
+            "serie": "R11085 DE",
+            "horometro": 0.0,
+            "modelo": "ECM 590(2)",
+            "motor": "MOTOR CUMMINS 6BTA 5,9",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 6,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "1998",
+            "centro_costos": 1107,
+            "maquina": 2,
+            "marca": 1,
+            "placa": "",
+            "serie": "R11103 KE",
+            "horometro": 0.0,
+            "modelo": "ECM 590(1)",
+            "motor": "CUMMINS 6BTA 5,9",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 4,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2008",
+            "centro_costos": 1108,
+            "maquina": 1,
+            "marca": 3,
+            "placa": "",
+            "serie": "WCA1N043581110008",
+            "horometro": 0.0,
+            "modelo": "C210T F-9",
+            "motor": "CUMMINS",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 7,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "1995",
+            "centro_costos": 1109,
+            "maquina": 12,
+            "marca": 1,
+            "placa": "",
+            "serie": "S3040",
+            "horometro": 0.0,
+            "modelo": "CM350",
+            "motor": "",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 8,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "",
+            "centro_costos": 1110,
+            "maquina": 12,
+            "marca": 4,
+            "placa": "",
+            "serie": "9730",
+            "horometro": 0.0,
+            "modelo": "CM 250",
+            "motor": "",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 10,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2012",
+            "centro_costos": 1111,
+            "maquina": 4,
+            "marca": 5,
+            "placa": "",
+            "serie": "258",
+            "horometro": 0.0,
+            "modelo": "SD1300E",
+            "motor": "CUMMINS CTAA8, 3-C ",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 13,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2000",
+            "centro_costos": 1202,
+            "maquina": 6,
+            "marca": 7,
+            "placa": "",
+            "serie": "7JK15217",
+            "horometro": 0.0,
+            "modelo": "320L",
+            "motor": "3066",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 14,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "1981",
+            "centro_costos": 1203,
+            "maquina": 7,
+            "marca": 8,
+            "placa": "",
+            "serie": "2041",
+            "horometro": 0.0,
+            "modelo": "14-C",
+            "motor": "PERKINS 6.354 N\u00ba 39277",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 15,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2008",
+            "centro_costos": 1204,
+            "maquina": 8,
+            "marca": 9,
+            "placa": "",
+            "serie": "08PY00580141",
+            "horometro": 0.0,
+            "modelo": "PQ190 IIA",
+            "motor": "CUMMINS 6BTA5.9-C201 N\u00ba:21830350",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 16,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "1995",
+            "centro_costos": 1205,
+            "maquina": 9,
+            "marca": 10,
+            "placa": "",
+            "serie": "FH-450723",
+            "horometro": 0.0,
+            "modelo": "393",
+            "motor": "DEUZT: BF4L913",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 17,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "1997",
+            "centro_costos": 1206,
+            "maquina": 10,
+            "marca": 11,
+            "placa": "",
+            "serie": "JKC8302809",
+            "horometro": 0.0,
+            "modelo": "W 1103",
+            "motor": "CUMMINS 6BTA5 9-O",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 18,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2007",
+            "centro_costos": 1207,
+            "maquina": 10,
+            "marca": 12,
+            "placa": "",
+            "serie": "Y14 40019",
+            "horometro": 0.0,
+            "modelo": "YZ14HD",
+            "motor": "CUMMINS 6BT5.9 N\u00ba: 21769372",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 19,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2000",
+            "centro_costos": 1208,
+            "maquina": 11,
+            "marca": 7,
+            "placa": "",
+            "serie": "14Y01084",
+            "horometro": 0.0,
+            "modelo": "D9L",
+            "motor": "73W2783",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 20,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2003",
+            "centro_costos": 1209,
+            "maquina": 11,
+            "marca": 7,
+            "placa": "",
+            "serie": "9EM00680",
+            "horometro": 0.0,
+            "modelo": "D8R(1)",
+            "motor": "41723956",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 24,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2008",
+            "centro_costos": 1210,
+            "maquina": 11,
+            "marca": 13,
+            "placa": "",
+            "serie": "AA-108041",
+            "horometro": 0.0,
+            "modelo": "SD - 16",
+            "motor": "C6121ZG57 N\u00ba:C3080000546",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 25,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2009",
+            "centro_costos": 1211,
+            "maquina": 11,
+            "marca": 13,
+            "placa": "",
+            "serie": "AA 111552",
+            "horometro": 0.0,
+            "modelo": "SD - 22",
+            "motor": "CUMMINS NTA855-C280 N\u00ba:41118057",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 26,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2008",
+            "centro_costos": 1212,
+            "maquina": 13,
+            "marca": 14,
+            "placa": "D1J-878",
+            "serie": "LZGJLDT498X005839",
+            "horometro": 0.0,
+            "modelo": "SX3254DT384",
+            "motor": "1507L476358",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 27,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2007",
+            "centro_costos": 1213,
+            "maquina": 13,
+            "marca": 15,
+            "placa": "C4K-812",
+            "serie": "LZGJLJT497X003618",
+            "horometro": 0.0,
+            "modelo": "STERYR 3254",
+            "motor": "WD615.46 N\u00ba: 50701002979",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 21,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2004",
+            "centro_costos": 1214,
+            "maquina": 11,
+            "marca": 7,
+            "placa": "",
+            "serie": "9EM00595",
+            "horometro": 0.0,
+            "modelo": "D8R(2)",
+            "motor": "3406",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 11,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2010",
+            "centro_costos": 1215,
+            "maquina": 5,
+            "marca": 6,
+            "placa": "",
+            "serie": "15G0102476",
+            "horometro": 0.0,
+            "modelo": "PQ190 IIA",
+            "motor": "C6121ZG50B (3306 B)",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 12,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2008",
+            "centro_costos": 1216,
+            "maquina": 6,
+            "marca": 7,
+            "placa": "",
+            "serie": "B6H00439",
+            "horometro": 0.0,
+            "modelo": "330DL",
+            "motor": "C9",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 22,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2004",
+            "centro_costos": 1217,
+            "maquina": 11,
+            "marca": 7,
+            "placa": "",
+            "serie": "9EM00593",
+            "horometro": 0.0,
+            "modelo": "D8R(3)",
+            "motor": "41Z23891",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 23,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "",
+            "centro_costos": 1218,
+            "maquina": 11,
+            "marca": 7,
+            "placa": "",
+            "serie": "9EM00543",
+            "horometro": 0.0,
+            "modelo": "D8R(4)",
+            "motor": "41Z23948",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 29,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "",
+            "centro_costos": 1301,
+            "maquina": 15,
+            "marca": 16,
+            "placa": "",
+            "serie": "PC 395 10",
+            "horometro": 0.0,
+            "modelo": "GX303",
+            "motor": "GX-270 270CM3 N\u00ba:GCADT-1207750",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 30,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "",
+            "centro_costos": 1302,
+            "maquina": 15,
+            "marca": 16,
+            "placa": "",
+            "serie": "PC 388 10",
+            "horometro": 0.0,
+            "modelo": "GX303",
+            "motor": "GX-270 270CM3 N\u00ba:GCADT-1207748",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 31,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "",
+            "centro_costos": 1303,
+            "maquina": 15,
+            "marca": 16,
+            "placa": "",
+            "serie": "",
+            "horometro": 0.0,
+            "modelo": "GX303",
+            "motor": "GX-270 270CM3 N\u00ba:GCADT-1207748",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 32,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2010",
+            "centro_costos": 1304,
+            "maquina": 16,
+            "marca": 17,
+            "placa": "",
+            "serie": "932",
+            "horometro": 0.0,
+            "modelo": "MDC9P",
+            "motor": "GX-270 270CM3 N\u00ba:GCADT-1207772",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 33,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2010",
+            "centro_costos": 1305,
+            "maquina": 16,
+            "marca": 17,
+            "placa": "",
+            "serie": "607",
+            "horometro": 0.0,
+            "modelo": "MDC11P",
+            "motor": "GX-390 389CM3 N\u00ba:GCAET-1655828",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 35,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "",
+            "centro_costos": 1306,
+            "maquina": 17,
+            "marca": 17,
+            "placa": "",
+            "serie": "",
+            "horometro": 0.0,
+            "modelo": "",
+            "motor": "GX-160 163CM3 N\u00ba:GCABT-3898709",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 34,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "2010",
+            "centro_costos": 1307,
+            "maquina": 16,
+            "marca": 17,
+            "placa": "",
+            "serie": "611",
+            "horometro": 0.0,
+            "modelo": "MDC9P",
+            "motor": "GX-390 389CM3 N\u00ba:GCADT-1205655",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 28,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "",
+            "centro_costos": 1308,
+            "maquina": 14,
+            "marca": 9,
+            "placa": "",
+            "serie": "11TB14102960",
+            "horometro": 0.0,
+            "modelo": "HBT40C-1410",
+            "motor": "",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 36,
+        "model": "maquinarias.maquina",
+        "fields": {
+            "anio": "1979",
+            "centro_costos": 1401,
+            "maquina": 18,
+            "marca": 20,
+            "placa": "WH-9949",
+            "serie": "10687392",
+            "horometro": 0.0,
+            "modelo": "62200",
+            "motor": "BIGCAM",
+            "horas_alerta": 50
+        }
+    },
+    {
+        "pk": 1,
+        "model": "maquinarias.operador",
+        "fields": {
+            "nombres": "Saturnino H"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "maquinarias.operador",
+        "fields": {
+            "nombres": "Tacuri"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "maquinarias.operador",
+        "fields": {
+            "nombres": "Timoteo Incahuanaco"
+        }
+    }
+]

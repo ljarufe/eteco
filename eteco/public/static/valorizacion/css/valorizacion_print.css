@@ -1,0 +1,49 @@
+* {
+    font: "Arial", serif;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.header {
+    margin: 10px 0;
+    text-align: left;
+    border-collapse: collapse;
+}
+    .header th {
+        width: 115px;
+    }
+    .header td {
+        padding-right: 5px;
+        width: 400px;
+    }
+
+.partes {
+    text-align: center;
+    border-collapse: collapse;
+}
+    .partes th {
+        border: 1px solid #000000;
+    }
+
+    .partes td, .partes th {
+        padding: 0 12px;
+    }
+
+input[type=text] {
+    border: none;
+    width: 70px;
+    text-align: center;
+}
+
+.head_edit {
+    width: 100% !important;
+    text-align: left !important;
+}
+
+.small {
+    width: 40px !important;
+}

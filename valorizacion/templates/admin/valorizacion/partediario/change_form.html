@@ -1,0 +1,37 @@
+{% extends "admin/change_form.html" %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script type="text/javascript">
+        function roundNumber(rnum, rlength) {
+            return Math.round(rnum*Math.pow(10,rlength))/Math.pow(10,rlength);
+        }
+
+        $(document).ready(function() {
+            $("#id_horometro_inicio, #id_horometro_final").change(function() {
+                $("#id_horas_trabajadas").val($("#id_horometro_final").val() - $("#id_horometro_inicio").val());
+            });
+
+            $("#id_horometro_inicio, #id_horometro_final, #id_horas_trabajadas").change(function() {
+                $("#id_horometro_inicio").val(roundNumber($("#id_horometro_inicio").val(), 2));
+                $("#id_horometro_final").val(roundNumber($("#id_horometro_final").val(), 2));
+                $("#id_horas_trabajadas").val(roundNumber($("#id_horas_trabajadas").val(), 2));
+            });
+
+            $("#id_maquina").change(function() {
+                var id_maquina = $(this).val();
+                var url = "{% url json_get_horometro %}";
+                var request = $.ajax({
+                    url: url,
+                    type: "GET",
+                    data: {id_maquina: id_maquina},
+                    dataType: "html"
+                });
+                request.done(function(msg) {
+                    var data = jQuery.parseJSON(msg);
+                    $("#id_horometro_inicio").val(data.horometro);
+                });
+            });
+        });
+    </script>
+{% endblock %}

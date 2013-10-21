@@ -1,0 +1,29 @@
+table {
+    margin: 30px;
+    border: 1px solid #d1d1d1;
+}
+td {
+    min-width: 120px;
+    border: 1px solid #e7e7e7;
+}
+th, td {
+    text-align: center;
+}
+
+.semaforo {
+    float: left;
+    width: 80px;
+    height: 22px;
+}
+
+.rojo {
+    background: url("/static/common/img/rojo.jpg") no-repeat center;
+}
+
+.amarillo {
+    background: url("/static/common/img/amarillo.jpg") no-repeat center;
+}
+
+.verde {
+    background: url("/static/common/img/verde.jpg") no-repeat center;
+}

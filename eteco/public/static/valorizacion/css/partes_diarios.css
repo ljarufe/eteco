@@ -1,0 +1,7 @@
+.print p, .print img {
+    display: inline;
+}
+
+table {
+    margin: 20px 0;
+}

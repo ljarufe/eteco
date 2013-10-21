@@ -1,0 +1,40 @@
+body{
+    padding: 10px 20px;
+}
+
+h1{
+    font-size: 25px;
+    text-align: center;
+}
+
+table{
+    margin-bottom: 20px;
+}
+
+.header th{
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.header td{
+    padding: 5px 10px;
+}
+
+td{
+    text-align: center;
+}
+
+.detail table, .detail td, .detail th{
+    border: 1px solid gray;
+    padding: 5px 10px;
+}
+
+.obs{
+    width: 250px;
+}
+
+.resultado {
+    font-weight: bold;
+    font-size: 19px;
+    margin-left: 12px;
+}

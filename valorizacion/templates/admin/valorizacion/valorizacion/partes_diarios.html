@@ -1,0 +1,127 @@
+{% extends "admin/base.html" %}
+
+{% block extrahead %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#select_all").change(function() {
+                $(".checkbox").attr("checked", $(this).is(':checked'));
+            });
+            $("#header").hide();
+        })
+    </script>
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}valorizacion/css/partes_diarios.css" media="screen"/>
+{% endblock %}
+
+{% block bodyclass %}change-form{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content_title %}
+    <h4>Lista de partes</h4>
+{% endblock %}
+
+{% block content %}
+    {% if obj.partes.all %}
+        {% block object-tools %}
+            <a href="{% url valorizacion_impresion obj.id %}" target="_blank" class="print">
+                <img src="{{ STATIC_URL }}common/img/print.png">
+                <p>Imprimir</p>
+            </a>
+        {% endblock %}
+
+        <form action="" method="post">
+            <div class="results">
+                <table id="result_list">
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" id="select_all">
+                            </th>
+                            <th>
+                                Máquina
+                            </th>
+                            <th>
+                                Número
+                            </th>
+                            <th>
+                                Fecha
+                            </th>
+                            <th>
+                                Obra
+                            </th>
+                            <th>
+                                Horómetro inicial
+                            </th>
+                            <th>
+                                Horómetro final
+                            </th>
+                            <th>
+                                Horas trabajadas
+                            </th>
+                            <th>
+                                Detalles
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for parte in obj.get_partes %}
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="parte_{{ forloop.counter }}" class="checkbox" id="id_parte_{{ parte.id }}" value="{{ parte.id }}">
+                            </td>
+                            <td>
+                                <label for="id_parte_{{ parte.id }}">
+                                    {{ parte.maquina }}
+                                </label>
+                            </td>
+                            <td>
+                                <label for="id_parte_{{ parte.id }}">
+                                    {{ parte.numero }}
+                                </label>
+                            </td>
+                            <td>
+                                <label for="id_parte_{{ parte.id }}">
+                                    {{ parte.fecha }}
+                                </label>
+                            </td>
+                            <td>
+                                <label for="id_parte_{{ parte.id }}">
+                                    {{ parte.obra }}
+                                </label>
+                            </td>
+                            <td>
+                                <label for="id_parte_{{ parte.id }}">
+                                    {{ parte.horometro_inicio }}
+                                </label>
+                            </td>
+                            <td>
+                                <label for="id_parte_{{ parte.id }}">
+                                    {{ parte.horometro_final }}
+                                </label>
+                            </td>
+                            <td>
+                                <label for="id_parte_{{ parte.id }}">
+                                    {{ parte.horas_trabajadas }}
+                                </label>
+                            </td>
+                            <td>
+                                <label for="id_parte_{{ parte.id }}">
+                                    {{ parte.detalles }}
+                                </label>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            <input type="submit" value="Borrar seleccionados">
+            </div>
+        </form>
+    {% else %}
+        <p class="paginator">
+            Esta valorización no contiene ningún parte
+        </p>
+    {% endif %}
+{% endblock %}
